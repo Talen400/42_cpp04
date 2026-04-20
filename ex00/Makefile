@@ -2,10 +2,12 @@ NAME := poly
 CC := c++
 CFLAGS := -Wall -Werror -Wextra -std=c++98 -I.
 
-SRC := main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC := main.cpp Animal.cpp Dog.cpp Cat.cpp \
+	   WrongAnimal.cpp WrongCat.cpp
 OBJ := $(SRC:.cpp=.o)
 
-HEADERS := Animal.hpp Dog.hpp Dog.hpp
+HEADERS := Animal.hpp Dog.hpp Dog.hpp \
+		   WrongAnimal.hpp WrongCat.hpp
 
 all: $(NAME)
 

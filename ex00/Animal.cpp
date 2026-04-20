@@ -32,7 +32,7 @@ void	Animal::setType(const std::string &type)
 	this->type = type;
 }
 
-void	Animal::makeSound()
+void	Animal::makeSound() const
 {
 	std::cout << "I am void animal" << std::endl;
 }

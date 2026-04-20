@@ -37,7 +37,7 @@ void	Dog::setType(const std::string &type)
 	this->type = type;
 }
 
-void	Dog::makeSound()
+void	Dog::makeSound() const
 {
 	std::cout << "AU AU!" << std::endl;
 }

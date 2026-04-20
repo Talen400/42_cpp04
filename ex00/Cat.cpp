@@ -37,7 +37,7 @@ void	Cat::setType(const std::string &type)
 	this->type = type;
 }
 
-void	Cat::makeSound()
+void	Cat::makeSound() const
 {
 	std::cout << "MEOW MEOW!" << std::endl;
 }
