@@ -36,4 +36,3 @@ void	Animal::makeSound() const
 {
 	std::cout << "I am void animal" << std::endl;
 }
-
