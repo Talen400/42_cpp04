@@ -2,11 +2,11 @@ NAME := brain
 CC := c++
 CFLAGS := -Wall -Werror -Wextra -std=c++98 -I.
 
-SRC := main.cpp helpers.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC := main.cpp helpers.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 
 OBJ := $(SRC:.cpp=.o)
 
-HEADERS := helpers.h Animal.hpp Dog.hpp Cat.hpp
+HEADERS := helpers.h Animal.hpp Dog.hpp Cat.hpp Brain.hpp
 
 all: $(NAME)
 
@@ -23,4 +23,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+val: re
+	valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)
+
+.PHONY: all clean fclean re val

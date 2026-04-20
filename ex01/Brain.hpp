@@ -1,7 +1,7 @@
 #ifndef BRAIN_HPP
 # define BRAIN_HPP
 
-#include <iostream>
+#include "helpers.h"
 
 class Brain
 {
