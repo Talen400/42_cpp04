@@ -2,11 +2,27 @@ NAME := amateria
 CC := c++
 CFLAGS := -Wall -Werror -Wextra -std=c++98 -I.
 
-SRC := main.cpp helpers.cpp
+SRC := main.cpp \
+	   AMateria.cpp \
+	   Character.cpp \
+	   Cure.cpp	\
+	   Ice.cpp \
+	   MateriaSource.cpp \
+	   helpers.cpp
 
 OBJ := $(SRC:.cpp=.o)
 
-HEADERS := amateria.h helpers.h
+HEADERS := amateria.h \
+	   AMateria.hpp \
+	   Character.hpp \
+	   Cure.hpp	\
+	   Ice.hpp \
+	   ICharacter.hpp \
+	   IMateriaSource.hpp \
+	   MateriaSource.hpp \
+	   helpers.h
+
+.SUFFIXES:
 
 all: $(NAME)
 
@@ -25,6 +41,6 @@ fclean: clean
 re: fclean all
 
 val:
-	valgrind --leak-check=full --show-leak-kinds=all ./$(NAME
+	valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)
 
 .PHONY: all clean fclean re val
